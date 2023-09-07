@@ -54,6 +54,32 @@ Axios 配置
        el-form 整个表单组件
        el-form-item 表单的一行 （一个表单域）
        el-input 表单元素（输入框） :prefix-icon  
+表单校验       
+    整个表单的校验规则
+         1. 非空校验 required: true      message消息提示，  trigger触发校验的时机 blur change
+         2. 长度校验 min:xx, max: xx
+         3. 正则校验 pattern: 正则规则    \S 非空字符
+         4. 自定义校验 => 自己写逻辑校验 (校验函数)
+            validator: (rule, value, callback)
+            (1) rule  当前校验规则相关的信息
+            (2) value 所校验的表单元素目前的表单值
+            (3) callback 无论成功还是失败，都需要 callback 回调
+                - callback() 校验成功
+                - callback(new Error(错误信息)) 校验失败
+         预校验 validate方法
+封装注册api
+登陆页面校验
+封装登录api
+获取用户信息 持久化 渲染用户信息
+退出登录操作           
+搭建文章分类架子 card组件
+文章分类渲染  封装获取文章分类api
+添加分类弹层    dialog组件  父子通信
+文章分类组件封装  
+        父子通信
+        :modelValue=""
+        @update:modelValue
+封装获取文章列表api 动态渲染
     
     
 ```
