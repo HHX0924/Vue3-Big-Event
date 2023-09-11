@@ -79,9 +79,16 @@ Axios 配置
         父子通信
         :modelValue=""
         @update:modelValue
-封装获取文章列表api 动态渲染
+封装获取文章列表api 动态渲染/
+添加/编辑文章 Drawer抽屉 前端预览图片 URL.createObjectURL
+添加/编辑文章传参 选择渲染页面 添加则渲染最后一页（计算得到）
+根据接口 需要将数据对象转换为formData对象 
+    const fd = new FormData()
+      for (let key in form.value) {
+        fd.append(key, form.value[key])
+      }
     
-    
+编辑文章数据回显 图片需要拼接 更新文章内容 根据接口文档 图片需要的是 file 格式的，将网络图片，转成 file 格式    
 ```
 ## Recommended IDE Setup
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

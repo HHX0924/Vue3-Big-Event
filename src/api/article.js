@@ -22,3 +22,10 @@ export const editChannelService = ({ cate_name, cate_alias, id }) => {
 
 export const artGetListService = (params) =>
   request.get('/my/article/list', { params })
+
+export const artDelService = (id) =>
+  request.delete('my/article/info', { params: { id } })
+
+export const artGetDetailService = (id) =>
+  request.get('my/article/info', { params: { id } })
+export const artEditService = (data) => request.put('my/article/info', data)
